@@ -52,6 +52,7 @@
                 <a href="/login" class="btn btn-secondary my-2 my-sm-0 ml-2">Login</a>
 
                 @else
+                <a href="/profile" class="btn btn-secondary my-2 my-sm-0 ml-4">saeed</a>
 
                 <a href="/profile" class="btn btn-secondary my-2 my-sm-0 ml-4">Profile</a>
                 <a href="/logout" class="btn btn-secondary my-2 my-sm-0 ml-2">LogOut</a>
