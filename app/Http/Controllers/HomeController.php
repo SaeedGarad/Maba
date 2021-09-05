@@ -36,14 +36,15 @@ class HomeController extends Controller
 
     public function search(Request $request)
     {
-       $products = Product::where('name' , 'like' , '%'. $request->name . '%')->get();
+       $products = Product::where('name' , 'like' , '%'. $request->name . '%')
+       ->orWhere('id' , $request->name)->get();
        return view('_Products')->with('products' , $products);
     }
 
     public function checkcart()
     {
        $product = Cart::where('user_id',Auth::id())->get();
-       
+
         return view('CheckCart')->with('products' , $product);
         // return 150;
     }
